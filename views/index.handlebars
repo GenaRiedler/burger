@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <h1>Eat Burgers!</h1>
+        <h5>Enter the name of a tasty burger and click submit. Then devour the ones that sound good (by clicking on the DEVOUR IT! button)</h5>
+    </div>
+   <div class="row">
+        <div class="one-half column">
+            <ul>
+            {{#each burgers}}
+            <li>
+                <p>
+                {{this.id}}. {{this.burger_name}}
+
+                <button data-burgerid="{{this.id}}" class="eatburger">devour it!</button>
+                </p>
+            </li>
+            {{/each}}
+            </ul>
+        </div>
+    </div>
+    <form id="createburger">
+        <div class="row">
+        <textarea type="text" name="burger"></textarea>
+        <button type="submit">Submit Burger!</button>
+        </div>
+    </form>
+
+</div>
